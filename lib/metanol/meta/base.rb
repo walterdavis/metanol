@@ -47,7 +47,7 @@ module Metanol
       end
 
       def self.filter_whitespaces(text)
-        text.gsub(/\s/, ' ').sub(/^\s+/, '').sub(/\s+$/, '')
+        text.gsub(/\s/, ' ').strip
       end
 
       private
