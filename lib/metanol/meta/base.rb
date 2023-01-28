@@ -39,7 +39,7 @@ module Metanol
 
       def self.filter_html(text)
         text = text.gsub(%r{><}, '> <').gsub(%r{<br/?>}, ' ')
-        text.gsub(%r{</?\w+/?>}, ' ')
+        text.gsub(%r{</?\w+/?>}, '')
       end
 
       def self.filter_overspaces(text)
@@ -47,7 +47,7 @@ module Metanol
       end
 
       def self.filter_whitespaces(text)
-        text.gsub(/\s/, ' ')
+        text.gsub(/\s/, ' ').sub(/^\s+/, '').sub(/\s+$/, '')
       end
 
       private
