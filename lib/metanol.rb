@@ -7,6 +7,7 @@ require 'metanol/meta/main'
 require 'metanol/meta/open_graph'
 require 'metanol/meta/webmaster'
 require 'metanol/meta/micro_data'
+require 'metanol/meta/twitter'
 
 require 'metanol/support'
 require 'metanol/helpers'

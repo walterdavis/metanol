@@ -16,13 +16,21 @@ module Metanol
       result.html_safe
     end
 
+    # Render Twitter meta tags
+    def metanol_twitter_tags
+      result = metanol_render_tags ::Metanol::Meta::Twitter
+      result << ::Metanol::Meta::Twitter.render_current_url(current_url)
+      result << ::Metanol::Meta::Twitter.render_current_domain(request.host)
+      result.html_safe
+    end
+
     SUPPORT_GROUPS.keys.each do |method|
       get_method_name = "get_#{method == :main ? '' : "#{method}_"}meta"
       define_method get_method_name do |name|
         controller.__send__(get_method_name, name)
       end
 
-      next if method == :og
+      next if (method == :og || method == :twitter)
 
       method_name = "metanol_#{method}_tags"
       class_type = SUPPORT_GROUPS[method]
