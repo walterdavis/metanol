@@ -38,7 +38,7 @@ module Metanol
       end
 
       def self.filter_html(text)
-        text = text.gsub(%r{<br/?>}, ' ')
+        text = text.gsub(%r{><}, '> <')gsub(%r{<br/?>}, ' ')
         text.gsub(%r{</?\w+/?>}, ' ')
       end
 
