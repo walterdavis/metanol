@@ -16,6 +16,8 @@
 .idea/
 !/log/.keep
 !/tmp/.keep
+/spec/fake_app/log/*
+!/spec/fake_app/log/.keep
 
 .DS_Store
 .byebug_history
