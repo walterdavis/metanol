@@ -31,7 +31,7 @@ RSpec.describe TestsController, type: :controller do
     end
 
     it do
-      expect(response.body).to match '<title>Users List</title>'
+      expect(response.body).to match '<title data-turbo-track="reload">Users List</title>'
     end
 
     it do
@@ -64,7 +64,7 @@ RSpec.describe TestsController, type: :controller do
     end
 
     it do
-      expect(response.body).not_to match '<title>'
+      expect(response.body).not_to match '<title data-turbo-track="reload">'
     end
 
     it do
@@ -100,7 +100,7 @@ RSpec.describe TestsController, type: :controller do
     end
 
     it do
-      expect(response.body).to match '<title>Users List</title>'
+      expect(response.body).to match '<title data-turbo-track="reload">Users List</title>'
     end
 
     it do

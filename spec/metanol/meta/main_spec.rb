@@ -20,7 +20,7 @@ RSpec.describe Metanol::Meta::Main do
       context 'when <title> meta tag' do
         let(:name) { 'title' }
 
-        it { expect(result).to eq "<title>Some <br/><span>text</span>   here\n</title>" }
+        it { expect(result).to eq "<title data-turbo-track=\"reload\">Some <br/><span>text</span>   here\n</title>" }
       end
     end
 

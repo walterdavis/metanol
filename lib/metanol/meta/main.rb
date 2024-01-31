@@ -4,7 +4,7 @@ module Metanol
   module Meta
     class Main < Base
       def render
-        return (value.present? ? "<title>#{value}</title>" : '') if @name == :title
+        return (value.present? ? "<title data-turbo-track=\"reload\">#{value}</title>" : '') if @name == :title
 
         super
       end
