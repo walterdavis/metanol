@@ -27,7 +27,7 @@ module Metanol
         result = value
         return '' if result.blank?
 
-        "<meta #{attr_name}=\"#{name}\" #{attr_value}=\"#{result}\" />"
+        "<meta data-turbo-track=\"reload\" #{attr_name}=\"#{name}\" #{attr_value}=\"#{result}\" />"
       end
 
       def value

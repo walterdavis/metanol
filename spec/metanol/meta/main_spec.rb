@@ -14,7 +14,7 @@ RSpec.describe Metanol::Meta::Main do
       context 'when a common meta tag' do
         let(:name) { 'description' }
 
-        it { expect(result).to eq "<meta name=\"description\" content=\"Some <br/><span>text</span>   here\n\" />" }
+        it { expect(result).to eq "<meta data-turbo-track=\"reload\" name=\"description\" content=\"Some <br/><span>text</span>   here\n\" />" }
       end
 
       context 'when <title> meta tag' do
@@ -28,36 +28,36 @@ RSpec.describe Metanol::Meta::Main do
       let(:name) { 'description' }
 
       [
-        [%i[html], "<meta name=\"description\" content=\"Some  text   here\n\" />"],
+        [%i[html], "<meta data-turbo-track=\"reload\" name=\"description\" content=\"Some  text   here\n\" />"],
         [
           %i[overspaces],
-          "<meta name=\"description\" content=\"Some <br/><span>text</span> here\n\" />"
+          "<meta data-turbo-track=\"reload\" name=\"description\" content=\"Some <br/><span>text</span> here\n\" />"
         ],
         [
           %i[whitespaces],
-          '<meta name="description" content="Some <br/><span>text</span>   here " />'
+          '<meta data-turbo-track="reload" name="description" content="Some <br/><span>text</span>   here " />'
         ],
-        [%i[clean], '<meta name="description" content="Some text here " />'],
-        [%w[html overspaces], "<meta name=\"description\" content=\"Some text here\n\" />"],
-        [%i[html whitespaces], '<meta name="description" content="Some  text   here " />'],
-        [%i[html clean], '<meta name="description" content="Some text here " />'],
+        [%i[clean], '<meta data-turbo-track="reload" name="description" content="Some text here " />'],
+        [%w[html overspaces], "<meta data-turbo-track=\"reload\" name=\"description\" content=\"Some text here\n\" />"],
+        [%i[html whitespaces], '<meta data-turbo-track="reload" name="description" content="Some  text   here " />'],
+        [%i[html clean], '<meta data-turbo-track="reload" name="description" content="Some text here " />'],
         [
           %w[html overspaces whitespaces],
-          '<meta name="description" content="Some text here " />'
+          '<meta data-turbo-track="reload" name="description" content="Some text here " />'
         ],
         [
           %i[html overspaces whitespaces clean],
-          '<meta name="description" content="Some text here " />'
+          '<meta data-turbo-track="reload" name="description" content="Some text here " />'
         ],
         [
           %i[overspaces whitespaces],
-          '<meta name="description" content="Some <br/><span>text</span> here " />'
+          '<meta data-turbo-track="reload" name="description" content="Some <br/><span>text</span> here " />'
         ],
         [
           %i[overspaces whitespaces clean],
-          '<meta name="description" content="Some text here " />'
+          '<meta data-turbo-track="reload" name="description" content="Some text here " />'
         ],
-        [%i[whitespaces clean], '<meta name="description" content="Some text here " />']
+        [%i[whitespaces clean], '<meta data-turbo-track="reload" name="description" content="Some text here " />']
       ].each do |filters, expected_result|
         context "with #{filters.join(', ')} filter(s)" do
           let(:filters) { filters }

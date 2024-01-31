@@ -12,11 +12,11 @@ RSpec.describe Metanol::Meta::Webmaster do
       let(:filters) { [] }
 
       {
-        bing: "<meta name=\"msvalidate.01\" content=\"Some <br/><span>text</span>   here\n\" />",
-        alexa: "<meta name=\"alexaVerifyID\" content=\"Some <br/><span>text</span>   here\n\" />",
-        yandex: '<meta name="yandex-verification" content="Some <br/><span>text</span>'\
+        bing: "<meta data-turbo-track=\"reload\" name=\"msvalidate.01\" content=\"Some <br/><span>text</span>   here\n\" />",
+        alexa: "<meta data-turbo-track=\"reload\" name=\"alexaVerifyID\" content=\"Some <br/><span>text</span>   here\n\" />",
+        yandex: '<meta data-turbo-track="reload" name="yandex-verification" content="Some <br/><span>text</span>'\
                 "   here\n\" />",
-        google: '<meta name="google-site-verification" content="Some <br/><span>text</span>'\
+        google: '<meta data-turbo-track="reload" name="google-site-verification" content="Some <br/><span>text</span>'\
                 "   here\n\" />"
       }.each do |name, expected_result|
         context "when meta tag is <#{name}>" do
@@ -37,36 +37,36 @@ RSpec.describe Metanol::Meta::Webmaster do
       let(:name) { 'bing' }
 
       [
-        [%i[html], "<meta name=\"msvalidate.01\" content=\"Some  text   here\n\" />"],
+        [%i[html], "<meta data-turbo-track=\"reload\" name=\"msvalidate.01\" content=\"Some  text   here\n\" />"],
         [
           %i[overspaces],
-          "<meta name=\"msvalidate.01\" content=\"Some <br/><span>text</span> here\n\" />"
+          "<meta data-turbo-track=\"reload\" name=\"msvalidate.01\" content=\"Some <br/><span>text</span> here\n\" />"
         ],
         [
           %i[whitespaces],
-          '<meta name="msvalidate.01" content="Some <br/><span>text</span>   here " />'
+          '<meta data-turbo-track="reload" name="msvalidate.01" content="Some <br/><span>text</span>   here " />'
         ],
-        [%i[clean], '<meta name="msvalidate.01" content="Some text here " />'],
-        [%w[html overspaces], "<meta name=\"msvalidate.01\" content=\"Some text here\n\" />"],
-        [%i[html whitespaces], '<meta name="msvalidate.01" content="Some  text   here " />'],
-        [%i[html clean], '<meta name="msvalidate.01" content="Some text here " />'],
+        [%i[clean], '<meta data-turbo-track="reload" name="msvalidate.01" content="Some text here " />'],
+        [%w[html overspaces], "<meta data-turbo-track=\"reload\" name=\"msvalidate.01\" content=\"Some text here\n\" />"],
+        [%i[html whitespaces], '<meta data-turbo-track="reload" name="msvalidate.01" content="Some  text   here " />'],
+        [%i[html clean], '<meta data-turbo-track="reload" name="msvalidate.01" content="Some text here " />'],
         [
           %w[html overspaces whitespaces],
-          '<meta name="msvalidate.01" content="Some text here " />'
+          '<meta data-turbo-track="reload" name="msvalidate.01" content="Some text here " />'
         ],
         [
           %i[html overspaces whitespaces clean],
-          '<meta name="msvalidate.01" content="Some text here " />'
+          '<meta data-turbo-track="reload" name="msvalidate.01" content="Some text here " />'
         ],
         [
           %i[overspaces whitespaces],
-          '<meta name="msvalidate.01" content="Some <br/><span>text</span> here " />'
+          '<meta data-turbo-track="reload" name="msvalidate.01" content="Some <br/><span>text</span> here " />'
         ],
         [
           %i[overspaces whitespaces clean],
-          '<meta name="msvalidate.01" content="Some text here " />'
+          '<meta data-turbo-track="reload" name="msvalidate.01" content="Some text here " />'
         ],
-        [%i[whitespaces clean], '<meta name="msvalidate.01" content="Some text here " />']
+        [%i[whitespaces clean], '<meta data-turbo-track="reload" name="msvalidate.01" content="Some text here " />']
       ].each do |filters, expected_result|
         context "with #{filters.join(', ')} filter(s)" do
           let(:filters) { filters }

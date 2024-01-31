@@ -3382,3 +3382,182 @@ Processing by TestsController#index as HTML
   Rendering inline template
   Rendered inline template (Duration: 1.3ms | Allocations: 138)
 Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms | Allocations: 330)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#show_title as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.2ms | Allocations: 243)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1269)
+Processing by HomeController#new as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 84)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 199)
+Processing by HomeController#new as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 83)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 198)
+Processing by HomeController#new as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 83)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 198)
+Processing by HomeController#new as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 83)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 198)
+Processing by HomeController#new as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 83)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 198)
+Processing by HomeController#new as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 83)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 198)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 162)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 314)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 141)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 285)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 141)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 285)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 141)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 285)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 143)
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 293)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 141)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 287)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 141)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 288)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 141)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 285)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 141)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 285)
+Processing by HomeController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 141)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 285)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 101)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 416)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 102)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 337)
+Processing by TestsController#index as HTML
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 151)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 82)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 347)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 82)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 237)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 82)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 237)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 82)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 237)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 108)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 343)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 168)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 446)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 146)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 313)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 146)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 313)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 146)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 313)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 146)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 313)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 111)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 356)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 91)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 326)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 98)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 365)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 98)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 253)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 98)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 253)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 98)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 253)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 147)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 455)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 137)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 329)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 137)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 329)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 137)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 329)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 137)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 329)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 137)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 329)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 137)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 329)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 137)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 329)
+Processing by TestsController#index as HTML
+  Rendering inline template
+  Rendered inline template (Duration: 0.1ms | Allocations: 137)
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 329)

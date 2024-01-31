@@ -13,7 +13,7 @@ RSpec.describe Metanol::Meta::OpenGraph do
       let(:name) { 'description' }
 
       it do
-        expect(result).to eq "<meta property=\"og:description\" content=\"Some <br/><span>text</span>   here\n\" />"
+        expect(result).to eq "<meta data-turbo-track=\"reload\" property=\"og:description\" content=\"Some <br/><span>text</span>   here\n\" />"
       end
     end
 
@@ -21,36 +21,36 @@ RSpec.describe Metanol::Meta::OpenGraph do
       let(:name) { 'description' }
 
       [
-        [%i[html], "<meta property=\"og:description\" content=\"Some  text   here\n\" />"],
+        [%i[html], "<meta data-turbo-track=\"reload\" property=\"og:description\" content=\"Some  text   here\n\" />"],
         [
           %i[overspaces],
-          "<meta property=\"og:description\" content=\"Some <br/><span>text</span> here\n\" />"
+          "<meta data-turbo-track=\"reload\" property=\"og:description\" content=\"Some <br/><span>text</span> here\n\" />"
         ],
         [
           %i[whitespaces],
-          '<meta property="og:description" content="Some <br/><span>text</span>   here " />'
+          '<meta data-turbo-track="reload" property="og:description" content="Some <br/><span>text</span>   here " />'
         ],
-        [%i[clean], '<meta property="og:description" content="Some text here " />'],
-        [%w[html overspaces], "<meta property=\"og:description\" content=\"Some text here\n\" />"],
-        [%i[html whitespaces], '<meta property="og:description" content="Some  text   here " />'],
-        [%i[html clean], '<meta property="og:description" content="Some text here " />'],
+        [%i[clean], '<meta data-turbo-track="reload" property="og:description" content="Some text here " />'],
+        [%w[html overspaces], "<meta data-turbo-track=\"reload\" property=\"og:description\" content=\"Some text here\n\" />"],
+        [%i[html whitespaces], '<meta data-turbo-track="reload" property="og:description" content="Some  text   here " />'],
+        [%i[html clean], '<meta data-turbo-track="reload" property="og:description" content="Some text here " />'],
         [
           %w[html overspaces whitespaces],
-          '<meta property="og:description" content="Some text here " />'
+          '<meta data-turbo-track="reload" property="og:description" content="Some text here " />'
         ],
         [
           %i[html overspaces whitespaces clean],
-          '<meta property="og:description" content="Some text here " />'
+          '<meta data-turbo-track="reload" property="og:description" content="Some text here " />'
         ],
         [
           %i[overspaces whitespaces],
-          '<meta property="og:description" content="Some <br/><span>text</span> here " />'
+          '<meta data-turbo-track="reload" property="og:description" content="Some <br/><span>text</span> here " />'
         ],
         [
           %i[overspaces whitespaces clean],
-          '<meta property="og:description" content="Some text here " />'
+          '<meta data-turbo-track="reload" property="og:description" content="Some text here " />'
         ],
-        [%i[whitespaces clean], '<meta property="og:description" content="Some text here " />']
+        [%i[whitespaces clean], '<meta data-turbo-track="reload" property="og:description" content="Some text here " />']
       ].each do |filters, expected_result|
         context "with #{filters.join(', ')} filter(s)" do
           let(:filters) { filters }
@@ -163,7 +163,7 @@ RSpec.describe Metanol::Meta::OpenGraph do
     context 'when URL is present' do
       let(:url) { 'https://google.com' }
 
-      it { expect(result).to eq '<meta property="og:url" content="https://google.com" />' }
+      it { expect(result).to eq '<meta data-turbo-track="reload" property="og:url" content="https://google.com" />' }
     end
   end
 end

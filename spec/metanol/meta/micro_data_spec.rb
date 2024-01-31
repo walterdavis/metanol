@@ -12,43 +12,43 @@ RSpec.describe Metanol::Meta::MicroData do
       let(:filters) { [] }
       let(:name) { 'description' }
 
-      it { expect(result).to eq "<meta itemprop=\"description\" content=\"Some <br/><span>text</span>   here\n\" />" }
+      it { expect(result).to eq "<meta data-turbo-track=\"reload\" itemprop=\"description\" content=\"Some <br/><span>text</span>   here\n\" />" }
     end
 
     context 'when filters' do
       let(:name) { 'description' }
 
       [
-        [%i[html], "<meta itemprop=\"description\" content=\"Some  text   here\n\" />"],
+        [%i[html], "<meta data-turbo-track=\"reload\" itemprop=\"description\" content=\"Some  text   here\n\" />"],
         [
           %i[overspaces],
-          "<meta itemprop=\"description\" content=\"Some <br/><span>text</span> here\n\" />"
+          "<meta data-turbo-track=\"reload\" itemprop=\"description\" content=\"Some <br/><span>text</span> here\n\" />"
         ],
         [
           %i[whitespaces],
-          '<meta itemprop="description" content="Some <br/><span>text</span>   here " />'
+          '<meta data-turbo-track="reload" itemprop="description" content="Some <br/><span>text</span>   here " />'
         ],
-        [%i[clean], '<meta itemprop="description" content="Some text here " />'],
-        [%w[html overspaces], "<meta itemprop=\"description\" content=\"Some text here\n\" />"],
-        [%i[html whitespaces], '<meta itemprop="description" content="Some  text   here " />'],
-        [%i[html clean], '<meta itemprop="description" content="Some text here " />'],
+        [%i[clean], '<meta data-turbo-track="reload" itemprop="description" content="Some text here " />'],
+        [%w[html overspaces], "<meta data-turbo-track=\"reload\" itemprop=\"description\" content=\"Some text here\n\" />"],
+        [%i[html whitespaces], '<meta data-turbo-track="reload" itemprop="description" content="Some  text   here " />'],
+        [%i[html clean], '<meta data-turbo-track="reload" itemprop="description" content="Some text here " />'],
         [
           %w[html overspaces whitespaces],
-          '<meta itemprop="description" content="Some text here " />'
+          '<meta data-turbo-track="reload" itemprop="description" content="Some text here " />'
         ],
         [
           %i[html overspaces whitespaces clean],
-          '<meta itemprop="description" content="Some text here " />'
+          '<meta data-turbo-track="reload" itemprop="description" content="Some text here " />'
         ],
         [
           %i[overspaces whitespaces],
-          '<meta itemprop="description" content="Some <br/><span>text</span> here " />'
+          '<meta data-turbo-track="reload" itemprop="description" content="Some <br/><span>text</span> here " />'
         ],
         [
           %i[overspaces whitespaces clean],
-          '<meta itemprop="description" content="Some text here " />'
+          '<meta data-turbo-track="reload" itemprop="description" content="Some text here " />'
         ],
-        [%i[whitespaces clean], '<meta itemprop="description" content="Some text here " />']
+        [%i[whitespaces clean], '<meta data-turbo-track="reload" itemprop="description" content="Some text here " />']
       ].each do |filters, expected_result|
         context "with #{filters.join(', ')} filter(s)" do
           let(:filters) { filters }

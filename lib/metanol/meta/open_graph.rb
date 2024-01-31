@@ -6,7 +6,7 @@ module Metanol
       def self.render_current_url(url)
         return '' if url.blank?
 
-        "<meta property=\"og:url\" content=\"#{url}\" />"
+        "<meta data-turbo-track=\"reload\" property=\"og:url\" content=\"#{url}\" />"
       end
 
       def name
